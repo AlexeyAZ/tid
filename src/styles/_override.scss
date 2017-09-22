@@ -1,0 +1,9 @@
+a {
+	color: $gray-main;
+	display: inline-block;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

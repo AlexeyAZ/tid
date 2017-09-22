@@ -1,0 +1,415 @@
+.index {
+	line-height: 1.5;
+
+	&__intro {
+		background-color: $blue-main;
+		color: white;
+		text-align: center;
+		padding: 84px 0 45px;
+
+		@include media(w768) {
+			padding: 30px 0;
+		}
+	}
+
+	&__intro-note {
+		font-size: 16px;
+	}
+
+	&__intro-title {
+		text-transform: uppercase;
+	}
+
+	&__intro-subtitle {
+		line-height: 1.9;
+		margin-bottom: 64px;
+	}
+
+	&__intro-img {
+		display: block;
+		margin: 0 auto;
+		max-width: 664px;
+		width: 100%;
+	}
+
+	&__utid {
+		padding: 60px 0 210px;
+
+		@include media(w1280) {
+			padding-bottom: 180px;
+		}
+
+		@include media(w1024) {
+			padding-bottom: 160px;
+		}
+
+		@include media(w768) {
+			padding: 30px 0;
+		}
+	}
+
+	&__utid-title {
+		margin-bottom: 140px;
+
+		@include media(w768) {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__utid-wrap {
+		position: relative;
+
+		@include media(w768) {
+			overflow: hidden;
+		}
+	}
+
+	&__utid-line {
+		display: block;
+		padding-left: 14px;
+		
+		@include media(w1280) {
+			width: 56vw;
+		}
+
+		@include media(w768) {
+			display: none;
+		}
+	}
+
+	&__utid-item {
+		position: absolute;
+		left: 0;
+		height: 50%;
+		width: 100%;
+
+		&_top {
+			top: 0;
+		}
+
+		&_bottom {
+			bottom: 0;
+
+			@include media(w768) {
+				display: flex;
+				flex-flow: column;
+
+				.index__utid-list_bottom {
+					order: 2;
+				}
+			}
+		}
+
+		@include media(w768) {
+			position: static;
+			height: auto;
+			width: auto;
+		}
+	}
+
+	&__utid-macbook {
+		display: inline-block;
+		position: relative;
+		
+		&_top {
+			margin-top: -8%;
+			margin-left: -1%;
+
+			@include media(w1280) {
+				width: 55%;
+			}
+		}
+
+		&_bottom {
+			margin-top: 6.5%;
+			position: absolute;
+			right: -1%;
+
+			@include media(w1280) {
+				width: 60%;
+			}
+		}
+
+		@include media(w768) {
+			display: block;
+			margin: 0 -#{$side-padding-mobile} 30px;
+			position: relative;
+			right: auto;
+			height: auto;
+			width: auto;
+		}
+	}
+
+	&__utid-macbook-img {
+		display: block;
+		max-width: 698px;
+		
+		&_bottom {
+			margin-left: auto;
+		}
+
+		@include media(w1280) {
+			width: 100%;
+		}
+	}
+
+	&__utid-macbook-mark {
+		position: absolute;
+
+		&_1 {
+			top: 6%;
+			left: 24%;
+		}
+
+		&_2 {
+			top: 14%;
+			left: 31%;
+		}
+
+		&_3 {
+			top: 70%;
+			left: 61%;
+		}
+
+		&_4 {
+			top: 6%;
+			left: 24%;
+		}
+
+		&_5 {
+			top: 14%;
+			left: 31%;
+		}
+
+		&_6 {
+			top: 70%;
+			left: 61%;
+		}
+	}
+
+	&__utid-mark {
+		background-color: $red-main;
+		border-radius: 50%;
+		display: inline-block;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			visibility: hidden;
+			height: 100%;
+			width: 0;
+		}
+
+		&_xs {
+			font-size: 14px;
+			height: 20px;
+			width: 20px;
+		}
+
+		&_l {
+			font-size: 18px;
+			height: 40px;
+			width: 40px;
+
+			@include media(w768) {
+				height: 60px;
+				width: 60px;
+			}
+		}
+
+		&_xxl {
+			font-size: 36px;
+			height: 80px;
+			width: 80px;
+
+			@include media(w768) {
+				font-size: 18px;
+				height: 60px;
+				width: 60px;
+			}
+		}
+
+		&_long {
+			padding-left: 12px;
+			padding-right: 12px;
+			width: auto;
+
+			&.index__utid-mark_xs {
+				border-radius: 10px;
+			}
+
+			&.index__utid-mark_l {
+				border-radius: 20px;
+			}
+
+			span {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	&__utid-list {
+		position: absolute;
+		
+		&_top {
+			top: -20px;
+			left: calc(59.2% + 14px);
+
+			@include media(w1280) {
+				left: calc(55.6vw);
+			}
+
+			.index__utid-list-item {
+
+				@include media(w1280) {
+					margin-left: -18px;
+				}
+
+				@include media(w768) {
+					margin-left: 0;
+				}
+			}
+
+			@include media(w768) {
+				margin-bottom: 30px;
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0;
+					height: 2000px;
+					left: 28px;
+					border-left: 4px dotted $red-main;
+					z-index: -1;
+				}
+			}
+		}
+
+		&_bottom {
+			bottom: -20px;
+			left: 0;
+		}
+
+		@include media(w768) {
+			position: relative;
+			top: auto;
+			left: auto;
+			bottom: auto;
+		}
+	}
+
+	&__utid-list-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 40px;
+		white-space: nowrap;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include media(w1280) {
+			white-space: normal;
+		}
+
+		@include media(w1024) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__utid-list-number {
+		margin-right: 20px;
+	}
+
+	&__gtid {
+		background-color: $gray-main-lightest;
+		padding: 60px 0 65px;
+
+		@include media(w768) {
+			padding: 30px 0;
+		}
+	}
+
+	&__gtid-title {
+		margin-bottom: 65px;
+
+		@include media(w768) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__gtid-wrap {
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__gtid-line {
+		transform: translateX(-50%);
+		border-top: 4px dotted $red-main;
+		position: absolute;
+		top: calc(40px - 4px);
+		left: 50%;
+		width: 70%;
+		z-index: -1;
+
+		@include media(w768) {
+			transform: translateX(0);
+			border-top: none;
+			border-left: 4px dotted $red-main;
+			top: 0;
+			left: 28px;
+			height: 1000px;
+		}
+	}
+
+	&__gtid-list {
+		display: flex;
+		justify-content: space-between;
+
+		@include media(w768) {
+			display: block;
+		}
+	}
+
+	&__gtid-list-item {
+		flex-basis: calc(100% / 3);
+		text-align: center;
+
+		&:nth-child(2) {
+			flex-basis: 40%;
+		}
+
+		@include media(w768) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			text-align: left;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__gtid-list-number {
+		margin-bottom: 20px;
+
+		@include media(w768) {
+			margin-right: 20px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__gtid-list-mark {
+		margin: 0 auto;
+	}
+}

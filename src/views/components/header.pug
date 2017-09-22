@@ -1,0 +1,17 @@
+header.header
+	div.container.header__container
+		div.header__logo
+			a(href="").header__logo-link
+				img(src="img/header-logo.png", alt="").header__logo-img
+			div.header__logo-info
+				a(href="tel:" + phoneAttr).
+					#{phoneNumber}
+				a(href="mailto:" + mail).
+					#{mail}
+		div.header__info
+			a(href="tel:" + phoneAttr).header__info-item.
+				#{phoneNumber}
+			a(href="mailto:" + mail).header__info-item.
+				#{mail}
+			a(href="").btn-rect.btn-rect_help.header__info-item.
+				Нужна помощь

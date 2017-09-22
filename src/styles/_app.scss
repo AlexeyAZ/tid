@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    color: $gray-main;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    position: relative;
+    line-height: 1.2;
+    min-width: 320px;
+
+    @include media(w1024) {
+        font-size: 16px;
+    }
+}

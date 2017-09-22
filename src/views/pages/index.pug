@@ -1,0 +1,80 @@
+extends ../templates/layout
+
+block vars
+    - var title = 'Main';
+    - var utidList = ["Ищем getMyTidBot в поиске контактов", "Добавляем getMyTidBot к себе в контакты", "Нажимаем START", "Нажимаем /help", "Нажимаем /getmytid", "Получаем TID"];
+    - var gtidList = ["Добавляем бот <br> @getMyTidBot в группу", "Пишем /help и<br> нажимаем Enter", "Пишем /getmytid и<br> нажимаем Enter"];
+
+
+block content
+    div.index
+        div.index__intro
+            div.container
+                p.index__intro-note
+                    |@
+                    span.fw-bold.
+                        getMyTidBot
+                h1.index__intro-title.tt-uppercase.
+                    Инструкция<br> для клиента Telegram
+                p.index__intro-subtitle.
+                    TID(Telegram ID) - это числовой идентификатор пользователя или группы.<br> Некоторые сервисы просят ввести его. Для того чтобы узнать свой TID создан этот сервис
+                img(src="img/planes.png", alt="").index__intro-img
+        div.index__utid
+            div.container
+                h2.ta-center.tt-uppercase.index__utid-title.
+                    Как узнать свой TID
+                div.index__utid-wrap
+                    img(src="img/line.svg", alt="").index__utid-line
+                    div.index__utid-item.index__utid-item_top
+                        div.index__utid-macbook.index__utid-macbook_top
+                            img(src="img/macbook1.png", alt="").index__utid-macbook-img.index__utid-macbook-img_top
+                            div.index__utid-mark.index__utid-mark_xs.index__utid-macbook-mark.index__utid-macbook-mark_1.
+                                1
+                            div.index__utid-mark.index__utid-mark_xs.index__utid-macbook-mark.index__utid-macbook-mark_2.
+                                2
+                            div.index__utid-mark.index__utid-mark_xs.index__utid-macbook-mark.index__utid-macbook-mark_3.
+                                3
+                        div.index__utid-list.index__utid-list_top
+                            - for (var i = 0; i < 3; i++) {
+                                div.index__utid-list-item
+                                        div.index__utid-list-number
+                                            div.index__utid-mark.index__utid-mark_l.
+                                                #{i + 1}
+                                        div.index__utid-list-text.
+                                            #{utidList[i]}
+                            -}
+                    div.index__utid-item.index__utid-item_bottom
+                        div.index__utid-list.index__utid-list_bottom
+                            - for (var i = 3; i < utidList.length; i++) {
+                                div.index__utid-list-item
+                                        div.index__utid-list-number
+                                            div.index__utid-mark.index__utid-mark_l.
+                                                #{i + 1}
+                                        div.index__utid-list-text.
+                                            #{utidList[i]}
+                            -}
+                        div.index__utid-macbook.index__utid-macbook_bottom
+                            img(src="img/macbook2.png", alt="").index__utid-macbook-img.index__utid-macbook-img_bottom
+                            div.index__utid-mark.index__utid-mark_xs.index__utid-macbook-mark.index__utid-macbook-mark_4.
+                                4
+                            div.index__utid-mark.index__utid-mark_xs.index__utid-macbook-mark.index__utid-macbook-mark_5.
+                                5
+                            div.index__utid-mark.index__utid-mark_long.index__utid-mark_xs.index__utid-macbook-mark.index__utid-macbook-mark_6
+                                |6
+                                span.fw-reg.
+                                    Ваш TID
+        div.index__gtid
+            div.container
+                h2.ta-center.tt-uppercase.index__gtid-title.
+                    Как узнать TID группы
+                div.index__gtid-wrap
+                    div.index__gtid-line
+                    div.index__gtid-list
+                        - for (var i = 0; i < gtidList.length; i++) {
+                            div.index__gtid-list-item
+                                div.index__gtid-list-number
+                                    div.index__utid-mark.index__utid-mark_xxl.index__gtid-list-mark.
+                                        #{i + 1}
+                                div.index__gtid-list-text.
+                                    !{gtidList[i]}
+                        -}

@@ -1,0 +1,25 @@
+.btn-rect {
+	transition: $trans;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+	padding: 10px 43px;
+
+	&_help {
+		background-color: $gray-main;
+		color: white;
+
+		&:hover {
+			background-color: lighten($gray-main, 10%);
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	@include media (w768) {
+		padding: 10px 20px;
+	}
+}
